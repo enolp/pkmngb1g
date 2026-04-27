@@ -596,7 +596,7 @@ DisplayOptionMenu:
 
 TextSpeedOptionText:
 	db   "VELOCIDÁ DEL TESTU"
-	next " LEN.  NORM.  RÁP."
+	next " LEN.  NORM.  RÁP.@"
 
 BattleAnimationOptionText:
 	db   "ANIMACIÓN BATALLES"
