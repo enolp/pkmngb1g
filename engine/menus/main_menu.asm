@@ -350,7 +350,7 @@ NewGameText:
 	next "CONFIGURACIÓN@"
 
 CableClubOptionsText:
-	db   "TRADE CENTER"
+	db   "C. D'INTRCMBÉU"
 	next "COLISÉU"
 	next "COLAR@"
 
