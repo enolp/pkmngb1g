@@ -35,7 +35,7 @@ MainMenu:
 ; there's a save file
 	hlcoord 0, 0
 	ld b, 6
-	ld c, 13
+	ld c, 14
 	call TextBoxBorder
 	hlcoord 2, 2
 	ld de, ContinueText
@@ -44,7 +44,7 @@ MainMenu:
 .noSaveFile
 	hlcoord 0, 0
 	ld b, 4
-	ld c, 13
+	ld c, 14
 	call TextBoxBorder
 	hlcoord 2, 2
 	ld de, NewGameText
@@ -341,30 +341,30 @@ SpecialEnterMap::
 	jp EnterMap
 
 ContinueText:
-	db "CONTINUE"
+	db "SIGUIR"
 	next ""
 	; fallthrough
 
 NewGameText:
-	db   "NEW GAME"
-	next "OPTION@"
+	db   "PARTIDA NUEVA"
+	next "CONFIGURACIÓN@"
 
 CableClubOptionsText:
 	db   "TRADE CENTER"
-	next "COLOSSEUM"
-	next "CANCEL@"
+	next "COLISÉU"
+	next "COLAR@"
 
 DisplayContinueGameInfo:
 	xor a
 	ldh [hAutoBGTransferEnabled], a
-	hlcoord 4, 7
+	hlcoord 3, 7
 	ld b, 8
-	ld c, 14
+	ld c, 15
 	call TextBoxBorder
-	hlcoord 5, 9
+	hlcoord 4, 9
 	ld de, SaveScreenInfoText
 	call PlaceString
-	hlcoord 12, 9
+	hlcoord 13, 9
 	ld de, wPlayerName
 	call PlaceString
 	hlcoord 17, 11
@@ -381,16 +381,16 @@ DisplayContinueGameInfo:
 PrintSaveScreenText:
 	xor a
 	ldh [hAutoBGTransferEnabled], a
-	hlcoord 4, 0
+	hlcoord 3, 0
 	ld b, $8
-	ld c, $e
+	ld c, $f
 	call TextBoxBorder
 	call LoadTextBoxTilePatterns
 	call UpdateSprites
-	hlcoord 5, 2
+	hlcoord 4, 2
 	ld de, SaveScreenInfoText
 	call PlaceString
-	hlcoord 12, 2
+	hlcoord 13, 2
 	ld de, wPlayerName
 	call PlaceString
 	hlcoord 17, 4
@@ -435,10 +435,10 @@ PrintPlayTime:
 	jp PrintNumber
 
 SaveScreenInfoText:
-	db   "PLAYER"
-	next "BADGES    "
+	db   "XUGADOR"
+	next "INISINIES    "
 	next "#DEX    "
-	next "TIME@"
+	next "T. XUGÁU@"
 
 DisplayOptionMenu:
 	hlcoord 0, 0
@@ -595,19 +595,19 @@ DisplayOptionMenu:
 	jp .eraseOldMenuCursor
 
 TextSpeedOptionText:
-	db   "TEXT SPEED"
-	next " FAST  MEDIUM SLOW@"
+	db   "VELOCIDÁ DEL TESTU"
+	next " LEN.  NORM.  RÁP."
 
 BattleAnimationOptionText:
-	db   "BATTLE ANIMATION"
-	next " ON       OFF@"
+	db   "ANIMACIÓN BATALLES"
+	next "    SÍ      NON@"
 
 BattleStyleOptionText:
-	db   "BATTLE STYLE"
-	next " SHIFT    SET@"
+	db   "ESTILU DE BATALLES"
+	next "  VARIABLE   FIXU@"
 
 OptionMenuCancelText:
-	db "CANCEL@"
+	db "COLAR@"
 
 ; sets the options variable according to the current placement of the menu cursors in the options menu
 SetOptionsFromCursorPositions:
