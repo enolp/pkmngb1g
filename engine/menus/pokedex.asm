@@ -363,7 +363,7 @@ PokedexSeenText:
 	db "VIS.@"
 
 PokedexOwnText:
-	db "CAP."
+	db "CAP.@"
 
 PokedexContentsText:
 	db "CONTENÍU@"
@@ -371,7 +371,7 @@ PokedexContentsText:
 PokedexMenuItemsText:
 	db   "INF."
 	next "BER."
-	next "AREA"
+	next "ÁREA"
 	next "COL.@"
 
 ; tests if a pokemon's bit is set in the seen or owned pokemon bit fields
@@ -478,7 +478,7 @@ ShowPokedexDataInternal:
 	hlcoord 2, 8
 	ld a, '№'
 	ld [hli], a
-	ld a, '<DOT>'
+	ld a, '.'
 	ld [hli], a
 	ld de, wPokedexNum
 	lb bc, LEADING_ZEROES | 1, 3
@@ -529,7 +529,6 @@ ShowPokedexDataInternal:
 	ld a, [hli]
 	ld [hld], a
 	ld [hl], '<DOT>'
-; now print the weight (note that weight is stored in tenths of pounds internally)
 	inc de
 	inc de
 	inc de ; de = address of upper byte of weight
@@ -592,7 +591,7 @@ ShowPokedexDataInternal:
 	ret
 
 HeightWeightText:
-	db   "AL  ???<m>"
+	db   "AL   ???<m>"
 	next "PE   ???<k><g>@"
 
 ; leftover from JPN Pokedex, where species have the suffix "Pokemon"
