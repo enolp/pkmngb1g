@@ -141,12 +141,12 @@ LinkMenu:
 	call SaveScreenTilesToBuffer1
 	ld hl, WhereWouldYouLikeText
 	call PrintText
-	hlcoord 5, 5
+	hlcoord 1, 5
 	ld b, $6
-	ld c, $d
+	ld c, $11
 	call TextBoxBorder
 	call UpdateSprites
-	hlcoord 7, 7
+	hlcoord 3, 7
 	ld de, CableClubOptionsText
 	call PlaceString
 	xor a
@@ -156,7 +156,7 @@ LinkMenu:
 	ld a, 7
 	ld [hli], a
 	ASSERT wTopMenuItemY + 1 == wTopMenuItemX
-	ld a, 6
+	ld a, 2
 	ld [hli], a
 	ASSERT wTopMenuItemX + 1 == wCurrentMenuItem
 	xor a
@@ -245,11 +245,11 @@ LinkMenu:
 	ld c, d
 .updateCursorPosition
 	ld a, b
-	ldcoord_a 6, 7
+	ldcoord_a 2, 7
 	ld a, c
-	ldcoord_a 6, 9
+	ldcoord_a 2, 9
 	ld a, d
-	ldcoord_a 6, 11
+	ldcoord_a 2, 11
 	ld c, 40
 	call DelayFrames
 	call LoadScreenTilesFromBuffer1
@@ -350,7 +350,7 @@ NewGameText:
 	next "CONFIGURACIÓN@"
 
 CableClubOptionsText:
-	db   "C. D'INTRCMBÉU"
+	db   "CENTRU DE CAMBÉU"
 	next "COLISÉU"
 	next "COLAR@"
 
@@ -436,7 +436,7 @@ PrintPlayTime:
 
 SaveScreenInfoText:
 	db   "XUGADOR"
-	next "INISINIES    "
+	next "INSINIES    "
 	next "#DEX    "
 	next "T. XUGÁU@"
 
@@ -561,12 +561,12 @@ DisplayOptionMenu:
 	jp .loop
 .cursorInBattleAnimation
 	ld a, [wOptionsBattleAnimCursorX] ; battle animation cursor X coordinate
-	xor 1 ^ 10 ; toggle between 1 and 10
+	xor 4 ^ 12 ; toggle between 1 and 10
 	ld [wOptionsBattleAnimCursorX], a
 	jp .eraseOldMenuCursor
 .cursorInBattleStyle
 	ld a, [wOptionsBattleStyleCursorX] ; battle style cursor X coordinate
-	xor 1 ^ 10 ; toggle between 1 and 10
+	xor 2 ^ 13 ; toggle between 1 and 10
 	ld [wOptionsBattleStyleCursorX], a
 	jp .eraseOldMenuCursor
 .pressedLeftInTextSpeed
@@ -661,17 +661,17 @@ SetCursorPositionsFromOptions:
 	hlcoord 0, 3
 	call .placeUnfilledRightArrow
 	sla c
-	ld a, 1 ; On
+	ld a, 4 ; On
 	jr nc, .storeBattleAnimationCursorX
-	ld a, 10 ; Off
+	ld a, 12 ; Off
 .storeBattleAnimationCursorX
 	ld [wOptionsBattleAnimCursorX], a ; battle animation cursor X coordinate
 	hlcoord 0, 8
 	call .placeUnfilledRightArrow
 	sla c
-	ld a, 1
+	ld a, 2
 	jr nc, .storeBattleStyleCursorX
-	ld a, 10
+	ld a, 13
 .storeBattleStyleCursorX
 	ld [wOptionsBattleStyleCursorX], a ; battle style cursor X coordinate
 	hlcoord 0, 13
