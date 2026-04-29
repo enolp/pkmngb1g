@@ -68,9 +68,9 @@
 
 	charmap "<to>",      $70 ; narrow "to"
 
-	charmap "『",         $72 ; Japanese opening quote, unused
+	charmap "『",        $72 ; Japanese opening quote, unused
 	charmap "<ID>",      $73
-	charmap "№",         $74
+	charmap "<Nu>",      $74
 
 ; Actual characters (from other graphics files)
 
@@ -203,9 +203,9 @@
 	charmap "!",         $e7
 	charmap ".",         $e8
 
-	charmap "ァ",         $e9 ; katakana small a, unused
-	charmap "ゥ",         $ea ; katakana small u, unused
-	charmap "ェ",         $eb ; katakana small e, unused
+	charmap "ァ",        $e9 ; katakana small a, unused
+	charmap "ゥ",        $ea ; katakana small u, unused
+	charmap "ェ",        $eb ; katakana small e, unused
 
 	charmap "▷",         $ec
 	charmap "▶",         $ed
@@ -213,7 +213,7 @@
 	charmap "♂",         $ef
 	charmap "¥",         $f0
 	charmap "×",         $f1
-	charmap "<DOT>",     $f2 ; decimal point; same as "." in English
+	charmap "<COLON>",   $f2 ; decimal point; "," in Asturian
 	charmap "/",         $f3
 	charmap ",",         $f4
 	charmap "♀",         $f5
