@@ -2071,8 +2071,8 @@ DisplayBattleMenu::
 	ld b, $1 ; top menu item X
 	jr .leftColumn_WaitForInput
 .safariLeftColumn
-	ldcoord_a 13, 14
-	ldcoord_a 13, 16
+	ldcoord_a 12, 14
+	ldcoord_a 12, 16
 	hlcoord 7, 14
 	ld de, wNumSafariBalls
 	lb bc, 1, 2
@@ -2110,7 +2110,7 @@ DisplayBattleMenu::
 	ld de, wNumSafariBalls
 	lb bc, 1, 2
 	call PrintNumber
-	ld b, $d ; top menu item X
+	ld b, $c ; top menu item X
 .rightColumn_WaitForInput
 	ld hl, wTopMenuItemY
 	ld a, $e
