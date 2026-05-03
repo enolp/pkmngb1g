@@ -139,7 +139,8 @@ DisplayMoneyBox:
 	call ClearScreenArea
 	hlcoord 12, 1
 	ld de, wPlayerMoney
-	ld c, 3 | LEADING_ZEROES | MONEY_SIGN
+	ld c, 3 | LEADING_ZEROES
+    ld [hl], '¥'
 	call PrintBCDNumber
 	ld hl, wStatusFlags5
 	res BIT_NO_TEXT_DELAY, [hl]
