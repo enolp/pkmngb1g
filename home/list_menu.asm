@@ -295,8 +295,9 @@ DisplayChooseQuantityMenu::
 	ld de, SpacesBetweenQuantityAndPriceText
 	call PlaceString
 	ld de, hMoney ; total price
-	ld c, 3 | LEADING_ZEROES | MONEY_SIGN
+	ld c, 3 | LEADING_ZEROES
 	call PrintBCDNumber
+    ld [hl], '¥'
 	hlcoord 9, 10
 .printQuantity
 	ld de, wItemQuantity ; current quantity
