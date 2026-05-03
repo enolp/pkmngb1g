@@ -110,7 +110,7 @@ StatusScreen:
 	add hl, de
 	ld [hl], '.'
 	dec hl
-	ld [hl], '№'
+	ld [hl], 'Nu'
 	hlcoord 19, 9
 	lb bc, 8, 6
 	call DrawLineBox ; Draws the box around types, ID No. and OT
@@ -205,7 +205,7 @@ NamePointers2:
 TypesIDNoOTText:
 	db   "TYPE1/"
 	next "TYPE2/"
-	next "<ID>№/"
+	next "<ID>Nu/"
 	next "OT/"
 	next "@"
 
