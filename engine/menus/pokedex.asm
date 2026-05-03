@@ -476,7 +476,7 @@ ShowPokedexDataInternal:
 	call IndexToPokedex
 
 	hlcoord 2, 8
-	ld a, '№'
+	ld a, '<Nu>'
 	ld [hli], a
 	ld a, '.'
 	ld [hli], a
@@ -528,7 +528,7 @@ ShowPokedexDataInternal:
 	inc hl
 	ld a, [hli]
 	ld [hld], a
-	ld [hl], '<DOT>'
+	ld [hl], ','
 	inc de
 	inc de
 	inc de ; de = address of upper byte of weight
