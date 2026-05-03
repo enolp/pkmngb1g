@@ -421,8 +421,9 @@ PrintListMenuEntries::
 	pop hl
 	ld bc, SCREEN_WIDTH + 5 ; 1 row down and 5 columns right
 	add hl, bc
-	ld c, 3 | LEADING_ZEROES | MONEY_SIGN
+	ld c, 3 | LEADING_ZEROES
 	call PrintBCDNumber
+    ld [hl], '¥'
 .skipPrintingItemPrice
 	ld a, [wListMenuID]
 	and a ; PCPOKEMONLISTMENU?
