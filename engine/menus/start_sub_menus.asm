@@ -541,16 +541,16 @@ DrawTrainerInfo:
 	call TrainerInfo_DrawVerticalLine
 	hlcoord 19, 10
 	call TrainerInfo_DrawVerticalLine
-	hlcoord 6, 9
+	hlcoord 5, 9
 	ld de, TrainerInfo_BadgesText
 	call PlaceString
-	hlcoord 2, 2
+	hlcoord 1, 2
 	ld de, TrainerInfo_NameMoneyTimeText
 	call PlaceString
-	hlcoord 7, 2
+	hlcoord 8, 2
 	ld de, wPlayerName
 	call PlaceString
-	hlcoord 8, 4
+	hlcoord 9, 4
 	ld de, wPlayerMoney
 	ld c, 3 | LEADING_ZEROES | LEFT_ALIGN | MONEY_SIGN
 	call PrintBCDNumber
@@ -569,13 +569,13 @@ TrainerInfo_FarCopyData:
 	jp FarCopyData2
 
 TrainerInfo_NameMoneyTimeText:
-	db   "NAME/"
-	next "MONEY/"
-	next "TIME/@"
+	db   "NOME/"
+	next "DINERU/"
+	next "T.XUGÁU/@"
 
 ; $76 is a circle tile
 TrainerInfo_BadgesText:
-	db $76,"BADGES",$76,"@"
+	db $76,"INSINIES",$76,"@"
 
 ; draws a text box on the trainer info screen
 ; height is always 6
