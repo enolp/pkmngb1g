@@ -110,7 +110,7 @@ StatusScreen:
 	add hl, de
 	ld [hl], '.'
 	dec hl
-	ld [hl], 'Nu'
+	ld [hl], '<Nu>'
 	hlcoord 19, 9
 	lb bc, 8, 6
 	call DrawLineBox ; Draws the box around types, ID No. and OT
