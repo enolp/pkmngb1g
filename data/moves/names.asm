@@ -61,7 +61,7 @@ MoveNames::
 	li "RAYU DE XELU"
 	li "CERCINA"
 	li "SICORRAYU"
-	li "RATU PÓMPARES"
+	li "RAYU PÓMPAR."
 	li "RAYU AURORA"
 	li "RAYU DESTRU."
 	li "PICOTAZU"
