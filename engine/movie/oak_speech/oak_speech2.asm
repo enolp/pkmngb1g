@@ -77,13 +77,13 @@ OakSpeechSlidePicLeft:
 	call CopyData
 	call Delay3
 	hlcoord 12, 4
-	lb de, 6, 6 * SCREEN_WIDTH + 5
+	lb de, 7, 6 * SCREEN_WIDTH + 5
 	ld a, $ff
 	jr OakSpeechSlidePicCommon
 
 OakSpeechSlidePicRight:
 	hlcoord 5, 4
-	lb de, 6, 6 * SCREEN_WIDTH + 5
+	lb de, 7, 6 * SCREEN_WIDTH + 5
 	xor a
 
 OakSpeechSlidePicCommon:
