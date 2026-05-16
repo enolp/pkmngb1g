@@ -113,7 +113,7 @@ MoveNames::
 	li "ABELLUGU"
 	li "CUERPU BOLA"
 	li "BARRERA"
-	li "MURIA LLUMIN."
+	li "MURIA LLUMI."
 	li "BORRÍN PRIE."
 	li "REFLEXU"
 	li "ENFOTU"
