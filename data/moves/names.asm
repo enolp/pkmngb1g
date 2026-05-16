@@ -109,7 +109,7 @@ MoveNames::
 	li "REFUERZU"
 	li "MENGUA"
 	li "FUMARADA"
-	li "LLUZ ESTRAÑA"
+	li "LLUZ ESTRAÑO"
 	li "ABELLUGU"
 	li "CUERPU BOLA"
 	li "BARRERA"
