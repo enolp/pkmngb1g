@@ -391,7 +391,7 @@ StatusScreen2:
 	ld [wLoadedMonLevel], a ; Increase temporarily if not 100
 .Level100
 	hlcoord 14, 6
-	ld [hl], '<to>'
+	ld [hl], '<-->'
 	inc hl
 	inc hl
 	call PrintLevel
