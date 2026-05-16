@@ -163,7 +163,7 @@ DisplayIntroNameTextBox:
 	push de
 	hlcoord 0, 0
 	ld b, $a
-	ld c, $9
+	ld c, $b
 	call TextBoxBorder
 	hlcoord 3, 0
 	ld de, .namestring
