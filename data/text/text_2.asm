@@ -1694,63 +1694,67 @@ _LinkCanceledText::
 	done
 
 _OakSpeechText1::
-	text "Hello there!"
-	line "Welcome to the"
-	cont "world of #MON!"
+ 	text "¡Hola! Afáyate"
+    line "nel mundu de los"
+    cont "#MON."
 
-	para "My name is OAK!"
-	line "People call me"
-	cont "the #MON PROF!"
-	prompt
+    para "Llámome CARBAYU"
+    line "mas la xente"
+    cont "suel llamame"
+    cont "PROF. CARBAYU."
+    prompt
 
 _OakSpeechText2A::
-	text "This world is"
-	line "inhabited by"
-	cont "creatures called"
-	cont "#MON!@"
-	text_end
+    text "Esti mundu ta"
+    line "habitáu por"
+    cont "creatures llamaes"
+    cont "#MON.@"
+    text_end
 
 _OakSpeechText2B::
-	text_start
+    text_start
 
-	para "For some people,"
-	line "#MON are"
-	cont "pets. Others use"
-	cont "them for fights."
+    para "Hai persones que"
+    line "los tienen de"
+    cont "compaña ya otros"
+    cont "úsenlos pa"
+    cont "lluchar."
 
-	para "Myself..."
+    para "Ya yo..."
 
-	para "I study #MON"
-	line "as a profession."
-	prompt
+    para "Dedícome al"
+    line "estudiu"
+    cont "profesional de"
+    cont "los #MON."
+    prompt
 
 _IntroducePlayerText::
-	text "First, what is"
-	line "your name?"
-	prompt
+    text "Por cierto,"
+    line "¿cómo te llames?"
+    prompt
 
 _IntroduceRivalText::
-	text "This is my grand-"
-	line "son. He's been"
-	cont "your rival since"
-	cont "you were a baby."
+    text "Esti ye'l mio"
+    line "ñetu ya sois"
+    cont "rivales dende"
+    cont "neños."
 
-	para "...Erm, what is"
-	line "his name again?"
-	prompt
+    para "Oi... ¿cómo se"
+    line "llamaba?"
+    prompt
 
 _OakSpeechText3::
-	text "<PLAYER>!"
+    text "¡<PLAYER>!"
 
-	para "Your very own"
-	line "#MON legend is"
-	cont "about to unfold!"
+    para "Tas a piques de"
+    line "comenzar la to"
+    cont "historia #MON."
 
-	para "A world of dreams"
-	line "and adventures"
-	cont "with #MON"
-	cont "awaits! Let's go!"
-	done
+    para "Espérate un mundu"
+    line "de suaños ya"
+    cont "aventures colos"
+    cont "#MON. ¡Vamos!"
+    done
 
 _DoYouWantToNicknameText::
 	text "Do you want to"
